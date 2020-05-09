@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using TreeAlgorithms.Interfaces;
 
-namespace TreeAlgorithms
+namespace TreeAlgorithms.Traversers
 {
     public class BreadthFirstTraverseCommand
     {
 
-        public void Traverse<T>(ITraversableTreeNode<T> root)
+        public void Traverse<T>(ITraversableTreeNode<T> root, Action<T> action)
         {
             Queue<ITraversableTreeNode<T>> queue = new Queue<ITraversableTreeNode<T>>();
             queue.Enqueue(root);
@@ -14,7 +15,7 @@ namespace TreeAlgorithms
             while (queue.Count > 0)
             {
                 var item = queue.Dequeue();
-                Console.WriteLine(item.Value);
+                action(item.Value);
 
                 foreach (var child in item.Children)
                 {

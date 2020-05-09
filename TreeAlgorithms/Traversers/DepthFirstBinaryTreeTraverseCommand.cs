@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using TreeAlgorithms.Interfaces;
 
-namespace TreeAlgorithms
+namespace TreeAlgorithms.Traversers
 {
     public class DepthFirstBinaryTreeTraverseCommand
     {
-        public void Traverse<T>(IBinaryTreeNode<T> root)
+        public void Traverse<T>(IBinaryTreeNode<T> root, Action<T> action)
         {
             Stack<IBinaryTreeNode<T>> q = new Stack<IBinaryTreeNode<T>>();
             q.Push(root);
             while (q.Count > 0)
             {
                 IBinaryTreeNode<T> n = q.Pop();
-                Console.WriteLine(n.Value);
+                action(n.Value);
 
                 if (n.Right != null)
                 {

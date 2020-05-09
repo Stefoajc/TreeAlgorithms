@@ -1,4 +1,7 @@
-﻿namespace TreeAlgorithms
+﻿using TreeAlgorithms.Interfaces;
+using TreeAlgorithms.Types;
+
+namespace TreeAlgorithms.Transformers
 {
     public class BinaryToRegularTreeCommand
     {

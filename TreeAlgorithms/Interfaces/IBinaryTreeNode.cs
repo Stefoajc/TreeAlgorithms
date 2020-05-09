@@ -1,4 +1,4 @@
-﻿namespace TreeAlgorithms
+﻿namespace TreeAlgorithms.Interfaces
 {
     public interface IBinaryTreeNode<T>
     {

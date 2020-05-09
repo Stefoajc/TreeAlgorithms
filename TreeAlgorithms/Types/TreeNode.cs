@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using TreeAlgorithms.Interfaces;
 
-namespace TreeAlgorithms
+namespace TreeAlgorithms.Types
 {
     public class TreeNode<T> : ITraversableTreeNode<T>
     {

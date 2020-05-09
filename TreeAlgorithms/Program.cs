@@ -1,15 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using TreeAlgorithms.Traversers;
+using TreeAlgorithms.Types;
 
 namespace TreeAlgorithms
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             TreeNodeWithoutParent<int> root = CreateExampleTree();
 
             var traverseCommand = new DepthFirstTraverseCommand();
-            traverseCommand.Traverse(root);
+
+
+            var list = new List<int>();
+            Action<int> actionToExecute = (int x) => list.Add(x);
+
+            traverseCommand.Traverse(root, actionToExecute);
+
+            list.ForEach(x => Console.WriteLine(x));
         }
 
 

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using TreeAlgorithms.Interfaces;
 
-namespace TreeAlgorithms
+namespace TreeAlgorithms.Types
 {
     public class BinaryTreeNode<T> : IBinaryTreeNode<T>
     {
