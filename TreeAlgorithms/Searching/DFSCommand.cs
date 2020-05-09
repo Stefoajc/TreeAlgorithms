@@ -1,13 +1,13 @@
 ﻿using System;
 using TreeAlgorithms.Interfaces;
 
-namespace TreeAlgorithms
+namespace TreeAlgorithms.Searching
 {
-    public class BFSCommand
+    public class DFSCommand
     {
         public void Execute<T>(ITraversableTreeNode<T> root, Func<T, bool> predicate)
         {
-            //TODO: Add implementation
+            //TODO: implement
         }
     }
 }
